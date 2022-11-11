@@ -1,0 +1,1 @@
+{"name":"Local: tettt","url":"/Users/yirandoris/Workspace/codeforces_train/tettt.cpp","tests":[{"id":1668150008194,"input":"3 3 2\n1 2 3\n1 2 3\n1 2 3\n1 2\n3 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/yirandoris/Workspace/codeforces_train/tettt.cpp","group":"local","local":true}
