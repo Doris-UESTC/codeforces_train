@@ -1,0 +1,1 @@
+{"name":"Local: kruskal","url":"/Users/yirandoris/Workspace/codeforces_train/kruskal.cpp","tests":[{"id":1669793660619,"input":"3 3\n1 2 23\n2 3 1000\n1 3 43","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/yirandoris/Workspace/codeforces_train/kruskal.cpp","group":"local","local":true}

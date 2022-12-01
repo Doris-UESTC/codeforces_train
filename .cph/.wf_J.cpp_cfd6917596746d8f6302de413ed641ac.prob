@@ -1,0 +1,1 @@
+{"name":"Local: wf_J","url":"/Users/yirandoris/Workspace/codeforces_train/wf_J.cpp","tests":[{"id":1668702758841,"input":"200 2 2\nS 1 2 3\nM 3 2 4\n4 99\n4 100","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/yirandoris/Workspace/codeforces_train/wf_J.cpp","group":"local","local":true}
