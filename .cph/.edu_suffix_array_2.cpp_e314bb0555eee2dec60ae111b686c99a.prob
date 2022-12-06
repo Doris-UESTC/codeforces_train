@@ -1,0 +1,1 @@
+{"name":"Local: edu_suffix_array_2","url":"/Users/yirandoris/Workspace/codeforces_train/edu_suffix_array_2.cpp","tests":[{"id":1670244525355,"input":"ababba\n3\nba\nbaba\nabba","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/yirandoris/Workspace/codeforces_train/edu_suffix_array_2.cpp","group":"local","local":true}

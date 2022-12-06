@@ -1,1 +1,0 @@
-{"name":"Local: topo_work1","url":"/Users/yirandoris/Workspace/codeforces_train/topo_work1.cpp","tests":[{"id":1665390196841,"input":"D>B\nA>D\nE<C\nA>B\nB>C","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/yirandoris/Workspace/codeforces_train/topo_work1.cpp","group":"local","local":true}
