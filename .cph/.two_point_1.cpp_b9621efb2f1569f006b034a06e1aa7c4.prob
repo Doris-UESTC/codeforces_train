@@ -1,0 +1,1 @@
+{"name":"Local: two_point_1","url":"/Users/yirandoris/Workspace/codeforces_train/two_point_1.cpp","tests":[{"id":1670861633032,"input":"6 7\n1 6 9 13 18 18\n2 3 8 13 15 21 25","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/yirandoris/Workspace/codeforces_train/two_point_1.cpp","group":"local","local":true}
