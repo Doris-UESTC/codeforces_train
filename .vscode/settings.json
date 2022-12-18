@@ -4,6 +4,10 @@
         "iostream": "cpp",
         "ostream": "cpp",
         "iosfwd": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "concepts": "cpp",
+        "fstream": "cpp",
+        "string": "cpp",
+        "filesystem": "cpp"
     }
 }
