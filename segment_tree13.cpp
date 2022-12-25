@@ -15,24 +15,24 @@ class Segment_tree{
         int mid = st + ((sp-st)>>1) ;
         return query(rght,l,r,mid+1,sp)+query(lft,l,r,st,mid);
     }
-    void build(int node, int st , int sp ){
+    void build(int node, int st , int sp ,vector<int> &x){
         if(st == sp){
-            tree[node] = 1 ;
+            tree[node] = x[st] ;
         }
         else{
             int lft = (node << 1) ;
             int rght = lft + 1;
             int mid = st + ((sp-st)>>1) ;
 
-            build(lft,st,mid) ;
-            build(rght,mid+1,sp) ;
+            build(lft,st,mid,x) ;
+            build(rght,mid+1,sp,x) ;
             tree[node] = operation(tree[lft],tree[rght]) ;
         }
     }
     void update(int node, int index, int st , int sp,int value){
         if(st > index || sp < index) return ;
         if(st == sp){
-            tree[node] += value ;
+            tree[node] = value ;
         }
         else{
             int lft = (node << 1) ;
@@ -52,20 +52,38 @@ class Segment_tree{
 int32_t main(){
     ios_base::sync_with_stdio(false);
     int n,m;
-    cin>>n>>m;
+    cin>>n;
+    vector<int> rec(n+1);
+    vector<int> x(n+1);
+    for(int i=1;i<=n;i++){
+        cin>>rec[i];
+        if(i%2==0){
+            x[i]=-rec[i];
+        }else{
+            x[i]=rec[i];
+        }
+    }
     Segment_tree st(n+1);
+    st.build(1,1,n,x);
+    cin>>m;
     for(int i=1;i<=m;i++){
         int op;
         cin>>op;
-        if(op==1){
-            int l,r,v;
-            cin>>l>>r>>v;
-            st.update(1,l,0,n-1,v);
-            st.update(1,r,0,n-1,-v);
-        }else if(op==2){
-            int index;
-            cin>>index;
-            int ans=st.query(1,0,index,0,n-1);
+        if(op==0){
+            int x,y;
+            cin>>x>>y;
+            if(x%2==0){
+                st.update(1,x,1,n,-y);
+            }else{
+                st.update(1,x,1,n,y);
+            }
+        }else if(op==1){
+            int x,y;
+            cin>>x>>y;
+            int ans=st.query(1,x,y,1,n);
+            if(x%2==0){
+                ans=-ans;
+            }
             cout<<ans<<endl;
         }
     }

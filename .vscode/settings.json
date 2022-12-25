@@ -8,6 +8,7 @@
         "concepts": "cpp",
         "fstream": "cpp",
         "string": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "valarray": "cpp"
     }
 }
