@@ -28,10 +28,10 @@ class Segment_tree{
             tree[node] = operation(tree[lft],tree[rght]) ;
         }
     }
-    void update(int node, int index, int st , int sp ){
+    void update(int node, int index, int st , int sp, int value){
         if(st > index || sp < index) return ;
         if(st == sp){
-            tree[node] = 1 ;
+            tree[node] = value;
         }
         else{
             int lft = (node << 1) ;

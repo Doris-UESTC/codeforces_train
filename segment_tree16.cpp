@@ -3,21 +3,14 @@ using namespace std;
 #define int long long
 struct Segment_tree{
     vector<int> tree;
+    int num;
     void init(int n){
+        num=n-1;
         tree.resize(n*4) ;
-    }
-    int query(int node, int l,int r, int st ,int sp){
-        if(l>sp || r<st) return 0;
-        if(l<=st && r>=sp) return tree[node];
-        int lft = (node << 1) ;
-        int rght = lft + 1;
-        int mid = st + ((sp-st)>>1) ;
-        return query(rght,l,r,mid+1,sp)+query(lft,l,r,st,mid);
     }
     void build(int node, int st , int sp ,vector<int> &x){
         if(st == sp){
             tree[node] = x[st];
-            return;
         }
         else{
             int lft = (node << 1) ;
@@ -46,7 +39,25 @@ struct Segment_tree{
         }
     }
     int operation(int l , int r){
-        return l + r ;
+        return min(l,r) ;
+    }
+    int query(int node, int l,int r, int st ,int sp,int p){
+        if(l>sp || r<st) return 0;
+        if(st==sp){
+            if(tree[node]<=p) {
+                update(1,st,1,num,INT_MAX);
+                return 1;
+            }
+        }
+        int lft = (node << 1) ;
+        int rght = lft + 1;
+        int mid = st + ((sp-st)>>1) ;
+        if(tree[node]<=p){
+            int s1=(tree[lft]<=p)?query(lft,l,r,st,mid,p):0;
+            int s2=(tree[rght]<=p)?query(rght,l,r,mid+1,sp,p):0;
+            return s1+s2;
+        }
+        return 0;
     }
 };
 int32_t main(){
@@ -56,39 +67,23 @@ int32_t main(){
     #endif
     ios_base::sync_with_stdio(false);
     int n,m;
-    Segment_tree st[41];
+    Segment_tree st;
     vector<int> init_array;
     cin>>n>>m;
-    init_array.assign(n+1, 0);
-    for(int i=0;i<=40;i++){
-        st[i].init(n+1);
-        st[i].build(1,1,n,init_array);
-    }
-    int x;
-    for(int i=1;i<=n;i++){
-        cin>>x;
-        init_array[i]=x;
-        st[x].update(1,i,1,n,1);
-    }
+    init_array.assign(n+1, INT_MAX);
+    st.init(n+1);
+    st.build(1,1,n,init_array);
     for(int i=1;i<=m;i++){
         int op;
         cin>>op;
         if(op==1){
-            int l,r;
-            cin>>l>>r;
-            int ans=0;
-            for(int j=1;j<=40;j++){
-                if(st[j].query(1,l,r,1,n)>0){
-                    ans++;
-                }
-            }
-            cout<<ans<<"\n";
+            int a,b;
+            cin>>a>>b;
+            st.update(1,a+1,1,n,b);
         }else if(op==2){
-            int x,y;
-            cin>>x>>y;
-            st[init_array[x]].update(1,x,1,n,0);
-            init_array[x]=y;
-            st[y].update(1,x,1,n,1);
+            int l,r,p;
+            cin>>l>>r>>p;
+            cout<<st.query(1,l+1,r,1,n,p)<<endl;
         }
     }
     return 0 ;

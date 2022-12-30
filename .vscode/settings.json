@@ -9,6 +9,11 @@
         "fstream": "cpp",
         "string": "cpp",
         "filesystem": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "__availability": "cpp",
+        "__hash_table": "cpp",
+        "barrier": "cpp",
+        "semaphore": "cpp",
+        "*.tcc": "cpp"
     }
 }
