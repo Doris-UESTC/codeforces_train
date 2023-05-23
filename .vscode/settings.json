@@ -14,6 +14,9 @@
         "__hash_table": "cpp",
         "barrier": "cpp",
         "semaphore": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "list": "cpp"
     }
 }

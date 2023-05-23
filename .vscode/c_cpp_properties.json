@@ -4,11 +4,11 @@
             "name": "Mac",
             "includePath": [
                 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/**",
-                "${workspaceFolder}/**",
+                "${workspaceFolder}/**"
             ],
             "defines": [],
             "macFrameworkPath": [],
-            "compilerPath": "/opt/homebrew/bin/gcc-11",
+            "compilerPath": "/opt/homebrew/bin/gcc-12",
             "cStandard": "gnu17",
             "intelliSenseMode": "macos-gcc-arm64"
         }
