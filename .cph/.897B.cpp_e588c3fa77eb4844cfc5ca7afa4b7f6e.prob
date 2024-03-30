@@ -1,0 +1,1 @@
+{"name":"Local: 897B","url":"/Users/yirandoris/Workspace/codeforces_train/897B.cpp","tests":[{"id":1711688464874,"input":"6\n6\n101011\n5\n00000\n9\n100100011\n3\n100\n1\n1\n2\n00\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/yirandoris/Workspace/codeforces_train/897B.cpp","group":"local","local":true}

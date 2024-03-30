@@ -1,0 +1,1 @@
+{"name":"Local: CodeTonB","url":"/Users/yirandoris/Workspace/codeforces_train/CodeTonB.cpp","tests":[{"id":1711727725351,"input":"2\n2 3\n0 1\n1 2 3\n3 1\n1 1 2\n1\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/yirandoris/Workspace/codeforces_train/CodeTonB.cpp","group":"local","local":true}
